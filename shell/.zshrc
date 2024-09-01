@@ -162,8 +162,11 @@ mkcd() {
 }
 
 # Add plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  git
+  zsh-autosuggestions 
+  zsh-syntax-highlighting
+)
 
 # Set default editor
 export EDITOR='nvim'
