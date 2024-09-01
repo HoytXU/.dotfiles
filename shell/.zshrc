@@ -102,3 +102,72 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+# # Set the Zsh options
+setopt autocd          # Change to a directory without typing 'cd'
+setopt glob_complete   # Enable tab completion for file names
+setopt correct         # Auto-corrects command names
+
+# Set the prompt
+PROMPT='%F{cyan}%n@%m %F{green}%~ %F{yellow}%% %f'
+
+# Enable color for the terminal
+autoload -U colors && colors
+
+# Aliases
+# Git aliases
+alias gs='git status'                  # Git status shortcut
+alias gaa='git add .'                   # Git add all
+alias ga='git add'                      # Git add
+alias gc='git commit -m'                # Git commit with a message
+alias gco='git checkout'                # Git checkout a branch or file
+alias gpl='git pull'                    # Git pull from the current branch
+alias gp='git push'                     # Git push
+alias gf='git fetch'                    # Git fetch
+
+# Confirm before deleting files
+alias rm='rm -i'                        # Confirm before deleting files
+# Confirm before copying files
+alias cp='cp -i'                        # Confirm before copying files
+# Confirm before moving files
+alias mv='mv -i'                        # Confirm before moving files
+
+# Shortcuts for editors
+alias nv='nvim'                         # Fast nvim
+alias v='vim'                           # Fast vim
+
+# List files with details
+alias ll='ls -la'                       # List files in detailed format
+
+# Path settings
+export PATH="$HOME/bin:$PATH"
+
+# Set up history
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+setopt append_history  # Append to the history file, don't overwrite it
+
+# Enable plugins (if using a framework like Oh My Zsh)
+ZSH=$HOME/.oh-my-zsh
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+# Source Oh My Zsh
+source $ZSH/oh-my-zsh.sh
+
+# Custom functions
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+# Add plugins
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+# Set default editor
+export EDITOR='nvim'
+
+# Enable auto-update for Oh My Zsh
+DISABLE_AUTO_UPDATE="false"
+
