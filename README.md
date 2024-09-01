@@ -15,4 +15,4 @@ cd ~
 2. clone this dotfile git
 git clone https://github.com/HoytXU/.dotfiles.git
 3. install
-just run ./install in your
+just run ./install inside the .dotfiles directory.
