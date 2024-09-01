@@ -120,8 +120,8 @@ autoload -U colors && colors
 alias gs='git status'                  # Git status shortcut
 alias gaa='git add .'                   # Git add all
 alias ga='git add'                      # Git add
-alias gc='git commit -m'                # Git commit with a message
 alias gco='git checkout'                # Git checkout a branch or file
+alias gc='git commit'
 alias gpl='git pull'                    # Git pull from the current branch
 alias gp='git push'                     # Git push
 alias gf='git fetch'                    # Git fetch
