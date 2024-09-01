@@ -1,0 +1,25 @@
+[submodule "shell/vim/pack/vendor/start/ctrlp.vim"]
+	path = shell/vim/pack/vendor/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "shell/vim/pack/vendor/start/ack.vim"]
+	path = shell/vim/pack/vendor/start/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "shell/vim/pack/vendor/start/nerdtree"]
+	path = shell/vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "shell/vim/pack/vendor/start/vim-easymotion"]
+	path = shell/vim/pack/vendor/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+[submodule "shell/vim/pack/vendor/start/surround.vim"]
+	path = shell/vim/pack/vendor/start/surround.vim
+	url = https://github.com/tpope/vim-surround
+[submodule "shell/vim/pack/vendor/start/vim-colorschemes"]
+	path = shell/vim/pack/vendor/start/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "shell/.vim/.vim/pack/vendor/start/fugitive"]
+	path = shell/.vim/.vim/pack/vendor/start/fugitive
+	url = https://github.com/vim-scripts/fugitive.vim

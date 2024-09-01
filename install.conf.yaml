@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- link:
+    ~/.bashrc: shell/.bashrc
+    ~/.inputrc: shell/.inputrc
+    ~/.vimrc: shell/.vimrc
+    ~/.zshrc: shell/.zshrc
+    ~/.vim: shell/.vim
+    ~/.oh-my-zsh: shell/.oh-my-zsh
+    ~/.config: shell/.config
+    ~/.tldr: shell/.tldr
+
