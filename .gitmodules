@@ -23,10 +23,3 @@
 [submodule "shell/.vim/.vim/pack/vendor/start/fugitive"]
 	path = shell/.vim/.vim/pack/vendor/start/fugitive
 	url = https://github.com/vim-scripts/fugitive.vim
-[submodule "shell/.tldr/tldr"]
-    path = shell/.tldr/tldr
-    url = https://github.com/tldr-pages/tldr
-
-[submodule ".tldr/tldr"]
-	path = .tldr/tldr
-	url = https://github.com/tldr-pages/tldr
