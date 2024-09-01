@@ -23,6 +23,9 @@
 [submodule "shell/.vim/.vim/pack/vendor/start/fugitive"]
 	path = shell/.vim/.vim/pack/vendor/start/fugitive
 	url = https://github.com/vim-scripts/fugitive.vim
+[submodule "shell/.tldr/tldr"]
+    path = shell/.tldr/tldr
+    url = https://github.com/tldr-pages/tldr.git
 [submodule "shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
