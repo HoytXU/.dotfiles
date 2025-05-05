@@ -1,1 +1,26 @@
+# 使用 vi 模式
 set editing-mode vi
+set keymap vi-command
+
+# 显示当前是 vi insert 还是 normal 模式（有些终端支持）
+set show-mode-in-prompt on
+
+# 光标样式提示（只有部分终端支持，比如 iTerm2、Kitty、Alacritty）
+# Normal 模式下光标是块状，Insert 模式下是条状
+set vi-cmd-mode-string \1\e[1 q
+set vi-ins-mode-string \1\e[5 q
+
+# 快捷键：↑ 搜索历史中匹配的命令
+# 上箭头绑定（兼容所有主流终端）
+"\e[A": history-search-backward
+
+# 下箭头绑定
+"\e[B": history-search-forward
+
+# 自动补全时显示所有匹配
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set menu-complete-display-prefix on
+
+# 输入时自动高亮匹配的括号（需要 readline 支持）
+set blink-matching-paren on
