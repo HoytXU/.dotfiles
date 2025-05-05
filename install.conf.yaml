@@ -13,7 +13,7 @@
     ~/.oh-my-zsh: shell/.oh-my-zsh
     ~/.config: shell/.config
     ~/.tldr: shell/.tldr
-    ~/.gem: shell/.gem
+    ~/.p10k.zsh: shell/.p10k.zsh
 
 - shell:
   - git submodule sync --recursive
