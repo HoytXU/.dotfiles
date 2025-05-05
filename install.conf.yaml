@@ -12,7 +12,6 @@
     ~/.vim: shell/.vim
     ~/.oh-my-zsh: shell/.oh-my-zsh
     ~/.config: shell/.config
-    ~/.tldr: shell/.tldr
     ~/.p10k.zsh: shell/.p10k.zsh
 
 - shell:
