@@ -11,7 +11,7 @@
     ~/.zshrc: shell/.zshrc
     ~/.vim: shell/.vim
     ~/.oh-my-zsh: shell/.oh-my-zsh
-    ~/.config: shell/.config
+    ~/.config/nvim: shell/.config/nvim
     ~/.p10k.zsh: shell/.p10k.zsh
 
 - shell:
