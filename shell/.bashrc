@@ -97,3 +97,29 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/mnt/petrelfs/xuhao/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/mnt/petrelfs/xuhao/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/mnt/petrelfs/xuhao/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/mnt/petrelfs/xuhao/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="$HOME/.local/bin:$PATH"
+export LIBRARY_PATH="$HOME/.local/lib:$LIBRARY_PAT"
+export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
+export CPATH="$HOME/.local/include:$CPATH"
+
+alias proxy_on='export http_proxy=http://xuhao:sd1iS1wu83H57cDSrizyAWGXNSyHVID8zkUsri0ZGkxYDoiFWcR5FhUfPjx6@10.1.20.50:23128/ ; export https_proxy=http://xuhao:sd1iS1wu83H57cDSrizyAWGXNSyHVID8zkUsri0ZGkxYDoiFWcR5FhUfPjx6@10.1.20.50:23128/ ; export HTTP_PROXY=http://xuhao:sd1iS1wu83H57cDSrizyAWGXNSyHVID8zkUsri0ZGkxYDoiFWcR5FhUfPjx6@10.1.20.50:23128/ ; export HTTPS_PROXY=http://xuhao:sd1iS1wu83H57cDSrizyAWGXNSyHVID8zkUsri0ZGkxYDoiFWcR5FhUfPjx6@10.1.20.50:23128/'
+alias proxy_off='unset http_proxy; unset https_proxy; unset HTTP_PROXY; unset HTTPS_PROXY'
+proxy_on
+
+alias setcuda10='export CUDA_HOME=/mnt/petrelfs/share/cuda-10.0 && export PATH=$CUDA_HOME/bin:$PATH'
