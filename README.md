@@ -1,11 +1,17 @@
-g# This dotfiles include my personal settings of:
+# This dotfiles include my personal settings of:
 - vim
 - neovim
 - bash
 - zsh
 
+
+## Environment
+- OS: Ubuntu 20.04 as default
+npm is needed for pyright, markdown-preview
+python3.12-venv is needed for pylsp
+
+
 ## Set up
-I'm using Ubuntu20.04 in my WSL system, and I'll take this system as the default. 
 1. go to your root directory
 cd ~
 
