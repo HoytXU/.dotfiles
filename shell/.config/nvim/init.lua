@@ -1,5 +1,3 @@
 require("config.settings")
 require("config.lazy")
 require("config.keybindings")
-require("config.lsp")
-require("config.nvim-cmp")
