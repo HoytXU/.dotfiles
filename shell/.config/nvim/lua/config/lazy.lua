@@ -41,7 +41,7 @@ require("lazy").setup({
     { import = "plugins" }, -- ⬅️ 你的插件目录在 lua/plugins 下
   },
   install = {
-    colorscheme = { "monokai_pro", "habamax" }, -- 安装阶段尝试这些配色
+    colorscheme = { "monokai_pro", "habamax", "kanagawa"}, -- 安装阶段尝试这些配色
   },
   checker = {
     enabled = true,         -- 自动检查插件更新

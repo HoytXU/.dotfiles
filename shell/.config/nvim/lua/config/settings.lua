@@ -24,7 +24,7 @@ o.termguicolors = true          -- 启用 24-bit 颜色支持
 o.fileencoding = "utf-8"        -- 文件编码
 
 -- colorscheme 设置
-local colorscheme = "monokai_pro"
+local colorscheme = "kanagawa"
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not is_ok then
