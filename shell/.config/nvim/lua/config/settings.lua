@@ -13,7 +13,7 @@ o.tabstop = 2                   -- tab 字符宽度
 o.ruler = true                  -- 显示光标位置
 o.mouse = "a"                   -- 启用鼠标支持
 o.title = true                  -- 显示窗口标题
-o.ttimeoutlen = 0               -- 按键超时时间
+o.ttimeoutlen = 50               -- 按键超时时间
 o.wildmenu = true               -- 命令行补全增强
 o.showcmd = true                -- 显示正在输入的命令
 o.showmatch = true              -- 匹配括号高亮
@@ -22,6 +22,11 @@ o.splitright = true             -- 新窗口右侧打开
 o.splitbelow = true             -- 新窗口下方打开
 o.termguicolors = true          -- 启用 24-bit 颜色支持
 o.fileencoding = "utf-8"        -- 文件编码
+
+-- disable netrw at the very start of your init.lua
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
 
 -- colorscheme 设置
 local colorscheme = "kanagawa"
