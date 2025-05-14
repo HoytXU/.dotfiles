@@ -10,6 +10,7 @@
     ~/.vimrc: shell/.vimrc
     ~/.zshrc: shell/.zshrc
     ~/.vim: shell/.vim
+    ~/.tmux.conf: shell/.tmux.conf
     ~/.oh-my-zsh: shell/.oh-my-zsh
     ~/.config/nvim: shell/.config/nvim
     ~/.p10k.zsh: shell/.p10k.zsh
