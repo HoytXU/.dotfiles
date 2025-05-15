@@ -1,8 +1,8 @@
 return {
-  -- kanagawa 主题
+  -- Kanagawa
   {
     "rebelot/kanagawa.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require("kanagawa").setup({
@@ -20,8 +20,6 @@ return {
           light = "lotus"
         },
       })
-
-      vim.cmd("colorscheme kanagawa")
     end,
   },
 
@@ -32,7 +30,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.catppuccin_flavour = "mocha" -- 可选: "latte", "frappe", "macchiato", "mocha"
+      vim.g.catppuccin_flavour = "mocha"
       require("catppuccin").setup({
         flavour = vim.g.catppuccin_flavour,
         integrations = {
@@ -47,15 +45,14 @@ return {
   -- TokyoNight
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require("tokyonight").setup({
-        style = "night", -- 可选: "storm", "moon", "night", "day"
+        style = "night",
         transparent = false,
         terminal_colors = true,
       })
-      vim.cmd.colorscheme("tokyonight")
     end,
   },
 
@@ -63,29 +60,28 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require("rose-pine").setup({
-        variant = "moon", -- 可选: "main", "moon", "dawn"
+        variant = "moon",
         dark_variant = "moon",
       })
-      vim.cmd.colorscheme("rose-pine")
     end,
   },
 
   -- Gruvbox
   {
     "ellisonleao/gruvbox.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
-      vim.o.background = "dark" -- 可选: "light", "dark"
+      vim.o.background = "dark"
       require("gruvbox").setup({
-        contrast = "hard", -- 可选: "soft", "medium", "hard"
+        contrast = "hard",
         transparent_mode = false,
       })
-      vim.cmd.colorscheme("gruvbox")
     end,
   },
 }
+
