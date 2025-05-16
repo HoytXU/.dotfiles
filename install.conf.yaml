@@ -14,6 +14,8 @@
     ~/.oh-my-zsh: shell/.oh-my-zsh
     ~/.config/nvim: shell/.config/nvim
     ~/.p10k.zsh: shell/.p10k.zsh
+    ~/.wezterm.lua: shell/.wezterm.lua
+    ~/wezterm_background.jpg: shell/wezterm_background.jpg
 
 - shell:
   - git submodule sync --recursive
