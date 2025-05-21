@@ -22,13 +22,9 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  autojump
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# Manually source if needed (some setups require it)
-[[ -f /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 
 # ─────────────────────────────────────────────────────────────
 # ⚙️ Zsh Options

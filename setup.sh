@@ -41,7 +41,7 @@ sudo apt install -y neovim
 
 # 🧱 Install essentials
 echo "📦 Installing zsh, tldr, npm, etc..."
-sudo apt install -y zsh tldr npm curl git wget python3.12-venv
+sudo apt install -y zsh tldr npm curl git wget python3.12-venv tmux htop nvitop
 
 # ⚙️ Setup dotfiles
 if [[ -d "$DOTFILE_DIR" ]]; then
