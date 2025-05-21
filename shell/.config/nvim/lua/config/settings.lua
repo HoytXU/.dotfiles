@@ -29,9 +29,9 @@ g.loaded_netrwPlugin = 1
 
 
 -- colorscheme 设置
-local colorscheme = "kanagawa"
-
-local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not is_ok then
-  vim.notify("colorscheme '" .. colorscheme .. "' not found!", vim.log.levels.WARN)
-end
+-- local colorscheme = "catppuccin-mocha"
+--
+-- local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+-- if not is_ok then
+--   vim.notify("colorscheme '" .. colorscheme .. "' not found!", vim.log.levels.WARN)
+-- end
