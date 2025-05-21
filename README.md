@@ -30,7 +30,7 @@ To add a new configuration file (e.g., `.tmux.conf`):
 2. Update the `install.conf.yaml` file to include the new symlink configuration. For example:
    ```yaml
    - link:
-       ~/.tmux.conf: tmux/.tmux.conf
+       ~/.tmux.conf: shell/.tmux.conf
    ```
 3. Run the installer to apply the changes:
    ```bash
@@ -38,8 +38,8 @@ To add a new configuration file (e.g., `.tmux.conf`):
    ```
 4. Commit the changes to the repository:
    ```bash
-   git add tmux/.tmux.conf install.conf.yaml
-   git commit -m "Add new configuration for tmux"
+   git add . 
+   git commit -m "feat(tmux): Add config for tmux." # suppose we are using Conventional Commmits
    git push
    ```
 
@@ -56,9 +56,8 @@ To remove an old configuration:
    ```
 4. Commit the changes to the repository:
    ```bash
-   git commit -m "Remove old configuration for [tool]"
+   git commit -m "chore(something old): Deleted something old."
    git push
    ```
 
-This uses Dotbot’s `install.conf.yaml` file to manage symlinks and ensures proper handling of configurations. Let me know if you’d like to refine this further!
 
