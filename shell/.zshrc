@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # the $ZSH_CUSTOM folder, with .zsh extension. Examples:
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
+# For a full list of active aliases, run alias.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

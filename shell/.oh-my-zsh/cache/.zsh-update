@@ -1,1 +1,9 @@
-LAST_EPOCH=20206
+LAST_EPOCH=20245
+EXIT_STATUS=1
+ERROR='error: Your local changes to the following files would be overwritten by checkout:
+	shell/.zshrc
+Please commit your changes or stash them before you switch branches.
+error: Your local changes to the following files would be overwritten by checkout:
+	shell/.oh-my-zsh/cache/.zsh-update
+Please commit your changes or stash them before you switch branches.
+Aborting'
