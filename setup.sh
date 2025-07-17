@@ -7,13 +7,6 @@ DOTFILE_DIR="$HOME/.dotfiles"
 
 echo "🚀 Starting dotfile setup..."
 
-# 🚫 Prevent running as root
-if [[ "$EUID" -eq 0 ]]; then
-  echo "❌ This script should NOT be run as root."
-  echo "👉 Please run as a regular user (sudo will be used where needed)."
-  exit 1
-fi
-
 # Detect OS
 OS="$(uname -s)"
 if [[ "$OS" != "Linux" ]]; then
@@ -41,7 +34,7 @@ sudo apt install -y neovim
 
 # 🧱 Install essentials
 echo "📦 Installing zsh, tldr, npm, etc..."
-sudo apt install -y zsh tldr npm curl git wget python3.12-venv tmux htop nvitop
+sudo apt install -y zsh tldr npm curl git wget tmux htop 
 
 # ⚙️ Setup dotfiles
 if [[ -d "$DOTFILE_DIR" ]]; then
