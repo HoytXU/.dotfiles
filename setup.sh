@@ -75,9 +75,10 @@ else
     rm "$INSTALLER"
 fi
 
-# 🧬 Initialize conda
-echo "🔁 Activating and initializing conda..."
-source ~/miniconda3/bin/activate
-conda init --all
+# Conda init is handled by shell/env.sh, which is sourced from both
+# ~/.bashrc and ~/.zshrc. We deliberately do NOT run `conda init --all`
+# here — it would write a duplicate managed `>>> conda initialize >>>`
+# block into the rc files. `source ~/miniconda3/bin/activate` was also
+# removed: it only activated conda inside this script's exiting subshell.
 
 echo -e "\n✅ Setup complete! Restart your terminal or run 'zsh' to dive in 🧃"
