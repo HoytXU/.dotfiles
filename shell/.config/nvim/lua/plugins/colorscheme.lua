@@ -1,5 +1,6 @@
 return {
-  -- Kanagawa
+  -- Kanagawa (disabled — uncomment block below to enable lazy install)
+  --[[
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
@@ -22,6 +23,7 @@ return {
       })
     end,
   },
+  ]]
 
   -- Catppuccin
   {
@@ -42,7 +44,8 @@ return {
     end,
   },
 
-  -- TokyoNight
+  -- TokyoNight (disabled — uncomment block below to enable lazy install)
+  --[[
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -55,8 +58,10 @@ return {
       })
     end,
   },
+  ]]
 
-  -- Rose Pine
+  -- Rose Pine (disabled — uncomment block below to enable lazy install)
+  --[[
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -69,8 +74,10 @@ return {
       })
     end,
   },
+  ]]
 
-  -- Gruvbox
+  -- Gruvbox (disabled — uncomment block below to enable lazy install)
+  --[[
   {
     "ellisonleao/gruvbox.nvim",
     lazy = true,
@@ -83,5 +90,6 @@ return {
       })
     end,
   },
+  ]]
 }
 
