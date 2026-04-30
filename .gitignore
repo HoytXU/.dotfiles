@@ -1,0 +1,17 @@
+# Editor swap files & OS junk
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Backups left behind by tools
+*.bak
+*.backup-*
+
+# Node toolchains pulled in by plugins (e.g. opencode)
+node_modules/
+
+# Oh-my-zsh runtime caches (keep the .gitkeep marker so the dir exists)
+shell/.oh-my-zsh/cache/*
+!shell/.oh-my-zsh/cache/.gitkeep
