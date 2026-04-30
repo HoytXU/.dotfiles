@@ -22,7 +22,7 @@
 	ignore = dirty
 [submodule "shell/.vim/pack/vendor/start/fugitive"]
 	path = shell/.vim/pack/vendor/start/fugitive
-	url = https://github.com/vim-scripts/fugitive.vim
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "shell/.tldr/tldr"]
     path = shell/.tldr/tldr
     url = https://github.com/tldr-pages/tldr.git
