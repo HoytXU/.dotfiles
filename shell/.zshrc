@@ -35,23 +35,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # ─────────────────────────────────────────────────────────────
-# ⚙️ Zsh Options
+# ⚙️ Zsh Options & History
 # ─────────────────────────────────────────────────────────────
 
-setopt autocd              # Just type folder name to cd into it
-setopt glob_complete       # Better tab completion
-setopt correct             # Auto-correct mistyped commands
-setopt append_history      # Don’t overwrite history
-setopt hist_ignore_dups    # Don't record consecutive duplicate commands
-setopt hist_ignore_space   # Don't record commands starting with a space
-
-# ─────────────────────────────────────────────────────────────
-# 📜 History Settings
-# ─────────────────────────────────────────────────────────────
-
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
+[ -f "$HOME/.dotfiles/shell/zsh/options.zsh" ] && . "$HOME/.dotfiles/shell/zsh/options.zsh"
 
 # ─────────────────────────────────────────────────────────────
 # 🎨 Prompt & Colors
@@ -64,41 +51,13 @@ autoload -U colors && colors
 # 🔁 Aliases
 # ─────────────────────────────────────────────────────────────
 
-# Git
-alias gs='git status'
-alias gaa='git add .'
-alias ga='git add'
-alias gco='git checkout'
-alias gc='git commit'
-alias gpl='git pull'
-alias gp='git push'
-alias gf='git fetch'
-
-# Safety
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# Editors
-alias nv='nvim'
-alias v='vim'
-
-# Utils
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
+[ -f "$HOME/.dotfiles/shell/zsh/aliases.zsh" ] && . "$HOME/.dotfiles/shell/zsh/aliases.zsh"
 
 # ─────────────────────────────────────────────────────────────
 # 🛠️ Custom Functions
 # ─────────────────────────────────────────────────────────────
 
-mkcd() {
-  mkdir -p "$1" && cd "$1"
-}
+[ -f "$HOME/.dotfiles/shell/zsh/functions.zsh" ] && . "$HOME/.dotfiles/shell/zsh/functions.zsh"
 
 # ─────────────────────────────────────────────────────────────
 # 🔄 Oh My Zsh Update Settings
