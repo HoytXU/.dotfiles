@@ -7,6 +7,7 @@ Personal configuration files for development environment. Uses [dotbot](https://
 **Shell & Terminal:**
 - `bash` (`.bashrc`, `.inputrc`)
 - `zsh` (`.zshrc`, `.p10k.zsh`, oh-my-zsh with powerlevel10k theme)
+- `shared` (`env.sh` — sourced by both `.bashrc` and `.zshrc`: secrets, conda init, PATH, NVM, bun)
 - `tmux` (`.tmux.conf`)
 - `wezterm` (`.wezterm.lua`, background image)
 
@@ -78,6 +79,7 @@ git submodule update --remote  # Update to latest commits
 ├── shell/                 # All config files
 │   ├── .bashrc
 │   ├── .zshrc
+│   ├── env.sh             # Shared env sourced by .bashrc and .zshrc
 │   ├── .vimrc
 │   ├── .tmux.conf
 │   ├── .vim/              # Vim plugins (submodules)
@@ -104,3 +106,5 @@ git submodule update --remote  # Update to latest commits
 - Setup script auto-detects network issues and switches to TUNA mirror (China)
 - Conda is installed to `~/miniconda3` if not present
 - After setup, restart terminal or run `zsh` to activate new shell
+- `shell/env.sh` holds shared shell env (secrets source, conda init, PATH, NVM, bun) and is sourced by both `.bashrc` and `.zshrc`. It is **not** symlinked — both rc files reference it directly via `$HOME/.dotfiles/shell/env.sh`, so the repo must live at `~/.dotfiles`.
+- **Conda init caveat:** running `conda init` (including via `setup.sh`) writes a managed `>>> conda initialize >>>` block back into `~/.bashrc` and `~/.zshrc`. If that happens, fold any new content into `shell/env.sh` and remove the duplicate block from the rc file to avoid double-initializing conda.
