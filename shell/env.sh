@@ -39,3 +39,26 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# >>> xray-proxy-toggle >>>
+# Toggle CLI traffic through the local Xray client (SOCKS5 :1080 / HTTP :1081).
+# Off by default; call proxy_on / proxy_off in any shell session.
+proxy_on() {
+    http_proxy="http://127.0.0.1:1081"
+    https_proxy="http://127.0.0.1:1081"
+    all_proxy="socks5h://127.0.0.1:1080"
+    no_proxy="localhost,127.0.0.1,::1"
+    export http_proxy https_proxy all_proxy no_proxy
+    HTTP_PROXY="$http_proxy"
+    HTTPS_PROXY="$https_proxy"
+    ALL_PROXY="$all_proxy"
+    NO_PROXY="$no_proxy"
+    export HTTP_PROXY HTTPS_PROXY ALL_PROXY NO_PROXY
+    echo "proxy on  -> http://127.0.0.1:1081 / socks5h://127.0.0.1:1080"
+}
+proxy_off() {
+    unset http_proxy https_proxy all_proxy no_proxy
+    unset HTTP_PROXY HTTPS_PROXY ALL_PROXY NO_PROXY
+    echo "proxy off"
+}
+# <<< xray-proxy-toggle <<<
