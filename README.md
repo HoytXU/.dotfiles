@@ -107,4 +107,4 @@ git submodule update --remote  # Update to latest commits
 - Conda is installed to `~/miniconda3` if not present
 - After setup, restart terminal or run `zsh` to activate new shell
 - `shell/env.sh` holds shared shell env (secrets source, conda init, PATH, NVM, bun) and is sourced by both `.bashrc` and `.zshrc`. It is **not** symlinked — both rc files reference it directly via `$HOME/.dotfiles/shell/env.sh`, so the repo must live at `~/.dotfiles`.
-- **Conda init caveat:** running `conda init` (including via `setup.sh`) writes a managed `>>> conda initialize >>>` block back into `~/.bashrc` and `~/.zshrc`. If that happens, fold any new content into `shell/env.sh` and remove the duplicate block from the rc file to avoid double-initializing conda.
+- **Conda init caveat:** running `conda init` manually (or after a conda upgrade prompts you to re-run it) writes a managed `>>> conda initialize >>>` block back into `~/.bashrc` and `~/.zshrc`. If that happens, fold any new content into `shell/env.sh` and remove the duplicate block from the rc file to avoid double-initializing conda. `setup.sh` itself no longer calls `conda init`.
