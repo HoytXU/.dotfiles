@@ -16,7 +16,7 @@ Personal configuration files for development environment. Uses [dotbot](https://
 - `neovim` (`.config/nvim/`)
 
 **Dependencies:**
-- Git submodules: dotbot, vim plugins, oh-my-zsh plugins/themes, tldr pages
+- Git submodules: dotbot, vim plugins, oh-my-zsh plugins/themes
 
 ## Quick Setup
 
@@ -98,7 +98,7 @@ git submodule update --remote  # Update to latest commits
 - oh-my-zsh, powerlevel10k theme, zsh-syntax-highlighting, zsh-autosuggestions
 
 **Tools:**
-- tldr-pages, dotbot
+- dotbot
 
 ## Notes
 

@@ -32,6 +32,3 @@
 [submodule "shell/.vim/pack/vendor/start/vim-colorschemes"]
 	path = shell/.vim/pack/vendor/start/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
-[submodule "shell/.tldr/tldr"]
-	path = shell/.tldr/tldr
-	url = https://github.com/tldr-pages/tldr.git
