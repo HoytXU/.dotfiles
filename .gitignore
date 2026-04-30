@@ -15,3 +15,8 @@ node_modules/
 # Oh-my-zsh runtime caches (keep the .gitkeep marker so the dir exists)
 shell/.oh-my-zsh/cache/*
 !shell/.oh-my-zsh/cache/.gitkeep
+
+# opencode / oh-my-openagent: highly volatile (model names, subscription
+# tiers) and currently in flux. Re-track selectively (e.g. opencode.json
+# and a *.example.json template) once the config stabilizes.
+shell/.config/opencode/
