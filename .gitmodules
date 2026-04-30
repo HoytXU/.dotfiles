@@ -1,3 +1,19 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "shell/.vim/pack/vendor/start/fugitive"]
+	path = shell/.vim/pack/vendor/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "shell/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = shell/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "shell/.oh-my-zsh/custom/themes/powerlevel10k"]
+    path = shell/.oh-my-zsh/custom/themes/powerlevel10k
+    url = https://github.com/romkatv/powerlevel10k.git
 [submodule "shell/.vim/pack/vendor/start/ctrlp.vim"]
 	path = shell/.vim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
@@ -16,22 +32,6 @@
 [submodule "shell/.vim/pack/vendor/start/vim-colorschemes"]
 	path = shell/.vim/pack/vendor/start/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
-[submodule "shell/.vim/pack/vendor/start/fugitive"]
-	path = shell/.vim/pack/vendor/start/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
 [submodule "shell/.tldr/tldr"]
-    path = shell/.tldr/tldr
-    url = https://github.com/tldr-pages/tldr.git
-[submodule "shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
-	path = shell/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "shell/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
-	path = shell/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "shell/.oh-my-zsh/custom/themes/powerlevel10k"]
-    path = shell/.oh-my-zsh/custom/themes/powerlevel10k
-    url = https://github.com/romkatv/powerlevel10k.git
+	path = shell/.tldr/tldr
+	url = https://github.com/tldr-pages/tldr.git
