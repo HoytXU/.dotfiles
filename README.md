@@ -21,7 +21,7 @@ Personal configuration files for development environment. Uses [dotbot](https://
 
 ### Automated (Full System Setup)
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/HoytXU/.dotfile/main/setup.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/HoytXU/.dotfile/master/setup.sh)
 ```
 Installs: zsh, neovim (unstable), tmux, npm, tldr, conda, and configures dotfiles.
 
