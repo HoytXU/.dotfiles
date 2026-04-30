@@ -13,8 +13,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -98,19 +98,5 @@ fi
 #    . /etc/bash_completion
 #fi
 
-[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/paradox/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/paradox/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/paradox/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/paradox/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+# Shared environment (secrets, conda, PATH, NVM, bun) — also sourced by ~/.zshrc
+[ -f "$HOME/.dotfiles/shell/env.sh" ] && . "$HOME/.dotfiles/shell/env.sh"

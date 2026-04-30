@@ -26,6 +26,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
 # ─────────────────────────────────────────────────────────────
 # ⚙️ Zsh Options
 # ─────────────────────────────────────────────────────────────
@@ -34,6 +42,8 @@ setopt autocd              # Just type folder name to cd into it
 setopt glob_complete       # Better tab completion
 setopt correct             # Auto-correct mistyped commands
 setopt append_history      # Don’t overwrite history
+setopt hist_ignore_dups    # Don't record consecutive duplicate commands
+setopt hist_ignore_space   # Don't record commands starting with a space
 
 # ─────────────────────────────────────────────────────────────
 # 📜 History Settings
@@ -75,7 +85,12 @@ alias v='vim'
 
 # Utils
 alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias ll='ls -la'
+alias la='ls -A'
+alias l='ls -CF'
 
 # ─────────────────────────────────────────────────────────────
 # 🛠️ Custom Functions
@@ -96,19 +111,6 @@ DISABLE_AUTO_UPDATE="false"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/paradox/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/paradox/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/paradox/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/paradox/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# Shared environment (secrets, conda, PATH, NVM, bun) — also sourced by ~/.bashrc
+[ -f "$HOME/.dotfiles/shell/env.sh" ] && . "$HOME/.dotfiles/shell/env.sh"
 
